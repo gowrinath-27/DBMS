@@ -1,0 +1,13 @@
+create table Student1 (Roll NUM, Name STR, Batch STR);
+create table Student2 (Roll NUM, Marks NUM);
+open table Student1;
+open table Student2;
+insert into Student1 values (1,Anu,A);
+insert into Student1 values (2,Cody,B);
+insert into Student1 values (3,Amy,B);
+insert into Student2 values (1,98);
+insert into Student2 values (2,80);
+insert into Student2 values (3,97);
+insert into Student2 values (4,67);
+SELECT Roll, Name, Marks FROM Student1 JOIN Student2 INTO Students WHERE Student1.Roll = Student2.Roll;
+echo Done
